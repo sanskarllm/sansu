@@ -1,0 +1,1 @@
+import{n as e,t}from"./jsx-runtime-B-hcVAMW.js";import{W as n}from"./index-D2LthzVl.js";e();var r=t();function i({className:e,...t}){return(0,r.jsx)(`label`,{className:n(`text-sm font-medium text-fg`,e),...t})}export{i as t};

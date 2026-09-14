@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "PrivacyByAI",
+      "hasCanvas": false,
+      "bodyTextLen": 3018,
+      "bodyTextHash": "1ad0bdc24cbd604bb00a05cbe4c670da9d7ab99c4b016a5dd32c2dfddfd95199",
+      "bodyTextPrefix": "PrivacyByAI Lab Workforce Company Privacy Contact Ask AI Ctrl K ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "PrivacyByAI",
+      "hasCanvas": false,
+      "bodyTextLen": 2966,
+      "bodyTextHash": "a591720094f15c17dc2be263c28c1e244a58d39dfee05b2d0c83f905f49fee2e",
+      "bodyTextPrefix": "PrivacyByAI PrivacyByAI · Millhand · textile and manufacturing S",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
