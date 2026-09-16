@@ -3,6 +3,8 @@ import { Menu, Search } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { UserButton } from "@/lib/auth/gates";
+import { SignedIn, SignedOut } from "@/lib/auth/gates";
 
 const LINKS = [
   { to: "/lab", label: "Lab" },
@@ -39,7 +41,7 @@ export function SiteHeader({ onSearch }: { onSearch: () => void }) {
             </Link>
           ))}
         </nav>
-        <div className="ml-auto flex items-center gap-1">
+        <div className="ml-auto flex items-center gap-2">
           <Button type="button" variant="ghost" size="sm" onClick={onSearch} className="hidden sm:inline-flex">
             <Search className="size-4" />
             Ask AI
@@ -48,6 +50,16 @@ export function SiteHeader({ onSearch }: { onSearch: () => void }) {
           <Button type="button" variant="ghost" size="icon" className="sm:hidden" onClick={onSearch} aria-label="Ask AI">
             <Search className="size-4" />
           </Button>
+
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          <SignedOut>
+            <Button asChild size="sm" variant="outline">
+              <Link to="/login">Sign in</Link>
+            </Button>
+          </SignedOut>
+
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button type="button" variant="ghost" size="icon" className="lg:hidden" aria-label="Menu">
@@ -72,6 +84,20 @@ export function SiteHeader({ onSearch }: { onSearch: () => void }) {
                 <Link to="/security" className="rounded-md px-3 py-3 text-sm hover:bg-surface" onClick={() => setOpen(false)}>
                   Security
                 </Link>
+                <div className="mt-4 border-t border-border pt-4">
+                  <SignedIn>
+                    <UserButton />
+                  </SignedIn>
+                  <SignedOut>
+                    <Link
+                      to="/login"
+                      className="block rounded-md px-3 py-3 text-sm font-medium hover:bg-surface"
+                      onClick={() => setOpen(false)}
+                    >
+                      Sign in
+                    </Link>
+                  </SignedOut>
+                </div>
               </nav>
             </SheetContent>
           </Sheet>
