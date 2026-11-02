@@ -52,6 +52,9 @@ export function SiteHeader({ onSearch }: { onSearch: () => void }) {
           </Button>
 
           <SignedIn>
+            <Button asChild size="sm" variant="ghost">
+              <Link to="/account">Account</Link>
+            </Button>
             <UserButton />
           </SignedIn>
           <SignedOut>
@@ -86,6 +89,9 @@ export function SiteHeader({ onSearch }: { onSearch: () => void }) {
                 </Link>
                 <div className="mt-4 border-t border-border pt-4">
                   <SignedIn>
+                    <Link to="/account" className="block rounded-md px-3 py-3 text-sm hover:bg-surface" onClick={() => setOpen(false)}>
+                      Account
+                    </Link>
                     <UserButton />
                   </SignedIn>
                   <SignedOut>
